@@ -34,21 +34,15 @@ function TeacherList(): ReactElement {
         <form id="search-teachers" onSubmit={searchTeachers}>
           <Select
             name="subject"
-            label="Matéria"
+            label="Serviços"
             value={subject}
             onChange={e => { setSubject(e.target.value) }}
             options={[
-              { value: 'Artes', label: 'Artes' },
-              { value: 'Biologia', label: 'Biologia' },
-              { value: 'Ciências', label: 'Ciências' },
-              { value: 'Educação Física', label: 'Educação Física' },
-              { value: 'Física', label: 'Física' },
-              { value: 'Geografia', label: 'Geografia' },
-              { value: 'Química', label: 'Química' },
-              { value: 'História', label: 'História' },
-              { value: 'Matemática', label: 'Matemática' },
-              { value: 'Português', label: 'Português' },
-              { value: 'Inglês', label: 'Inglês' },
+              { value: 'Unhas', label: 'Unhas' },
+              { value: 'Cabelos', label: 'Cabelos' },
+              { value: 'Corpo', label: 'Corpo' },
+              { value: 'Maquiagem', label: 'Maquiagem' },
+              
             ]}
           />
           <Select

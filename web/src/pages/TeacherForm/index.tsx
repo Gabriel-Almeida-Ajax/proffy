@@ -66,7 +66,7 @@ function TeacherForm(): ReactElement {
   return (
     <div id="page-teacher-form" className="container">
       <PageHeader
-        title="Que incrível que você quer dar aulas."
+        title="Que incrível que você quer ser um contribuente."
         description="O primeiro passo é preencher esse formulário de inscrição."
       />
 
@@ -83,7 +83,7 @@ function TeacherForm(): ReactElement {
 
             <Input
               name="avatar"
-              label="Avatar"
+              label="FOTO"
               value={avatar}
               onChange={(e) => { setAvatar(e.target.value) }}
             />
@@ -107,26 +107,19 @@ function TeacherForm(): ReactElement {
             <legend>Sobre a aula</legend>
             <Select
               name="subject"
-              label="Matéria"
+              label="Serviço"
               value={subject}
               onChange={(e) => { setSubject(e.target.value) }}
               options={[
-                { value: 'Artes', label: 'Artes' },
-                { value: 'Biologia', label: 'Biologia' },
-                { value: 'Ciências', label: 'Ciências' },
-                { value: 'Educação Física', label: 'Educação Física' },
-                { value: 'Física', label: 'Física' },
-                { value: 'Geografia', label: 'Geografia' },
-                { value: 'Química', label: 'Química' },
-                { value: 'História', label: 'História' },
-                { value: 'Matemática', label: 'Matemática' },
-                { value: 'Português', label: 'Português' },
-                { value: 'Inglês', label: 'Inglês' },
+                { value: 'Unhas', label: 'Unhas' },
+              { value: 'Cabelos', label: 'Cabelos' },
+              { value: 'Corpo', label: 'Corpo' },
+              { value: 'Maquiagem', label: 'Maquiagem' },
               ]}
             />
             <Input
               name="cost"
-              label="Custo da sua hora por aula"
+              label="Custo da sua hora"
               value={cost}
               onChange={(e) => { setCost(e.target.value) }}
             />
