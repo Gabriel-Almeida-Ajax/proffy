@@ -30,7 +30,7 @@ function TeacherList(): ReactElement {
 
   return (
     <div id="page-teacher-list" className="container">
-      <PageHeader title="Estes são os proffys disponíveis.">
+      <PageHeader title="Colaboradores disponíveis.">
         <form id="search-teachers" onSubmit={searchTeachers}>
           <Select
             name="subject"
