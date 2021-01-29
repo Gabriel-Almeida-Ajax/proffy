@@ -104,7 +104,7 @@ function TeacherForm(): ReactElement {
           </fieldset>
 
           <fieldset>
-            <legend>Sobre a aula</legend>
+            <legend>Sobre o serviço</legend>
             <Select
               name="subject"
               label="Serviço"
