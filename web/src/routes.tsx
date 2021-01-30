@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Singin from './pages/Landing/auth/singin';
 
 import Landing from './pages/Landing';
 import TeacherList from './pages/TeacherList';
@@ -11,6 +12,7 @@ function Routes(): ReactElement {
       <Route path="/" exact component={Landing} />
       <Route path="/study" component={TeacherList} />
       <Route path="/give-classes" component={TeacherForm} />
+      <Route path="/singin" component={Singin} />
     </BrowserRouter>
   );
 }
