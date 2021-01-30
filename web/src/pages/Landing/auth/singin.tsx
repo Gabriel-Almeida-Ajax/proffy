@@ -94,21 +94,15 @@ return (
           </fieldset>
           <fieldset>
           <div className="third-party-join__container">
-              <p className="third-party-join__reg-option">
-                  <span className="third-party-join__line-wrapper">
-                      <span className="third-party-join__line">
-                          </span>
-                          </span>
-                          <span className="third-party-join__content">
-                              <span className="third-party-join__or-span">
-                                  ou
-                                  </span>
-                                  </span>
-                                  </p>
-                                  <button type="button" data-tracking-control-name="_join-form-join-with-google" className="third-party-join__btn third-party-join__google-btn">
-                                  <img src={googleIcon} alt="Google" />
-                                      
-                                      <span className="third-party-join__google-btn-content">Cadastre-se com Google</span></button></div>
+            <p className="third-party-join__reg-option">
+              <span className="third-party-join__line-wrapper">
+                <span className="third-party-join__line"></span></span>
+                <span className="third-party-join__content">
+                  <span className="third-party-join__or-span">ou</span></span></p>
+                  <button type="button" data-tracking-control-name="_join-form-join-with-google" className="third-party-join__btn third-party-join__google-btn">
+          <Link to="/singin" className="third-party-join__google-btn-content"> 
+            <img src={googleIcon} alt="Estudar" />
+              Cadastre-se com Google</Link></button></div>
           </fieldset>
           <footer>
             <p>
