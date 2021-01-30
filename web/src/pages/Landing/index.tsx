@@ -27,8 +27,12 @@ function Landing(): ReactElement {
       <div id="page-landing-content" className="container">
         <div className="logo-container">
           <img src={logoImg} alt="Proffy" />
-          
-          <h2>Sua plataforma de serviços online.</h2>
+          <h2>
+  <a href="" className="typewrite" data-period="2000" data-type='[ "Olá, seja bem-vindo!", "Seu site de serviços online.", "Facilidades e praticidade.", "I Love u." ]'>
+    <span className="wrap"></span>
+  </a>
+</h2>
+
         </div>
         <img src={landingImg} alt="Plataforma de estudos" className="hero-image" />
 
