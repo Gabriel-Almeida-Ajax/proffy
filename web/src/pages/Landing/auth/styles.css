@@ -19,11 +19,13 @@ p{
 }
 
 button{
+    
     grid-row-start: 3;
     grid-column-end: 3;
     grid-column-start: -5;
     grid-column-end: -2;
 }
+
 .third-party-join__google-btn{
     height: 175%;
     border-radius: 25px;
@@ -32,45 +34,24 @@ button{
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
-.third-party-join__google-btn a{
 
-    left: 50%;
-    right: 50%;
-}
-.third-party-join__google-btn-content{
 
-    display: flex;
-    align-items: center    ;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-}
 .third-party-join__google-btn-content img{
-    
-    padding-right: 15px;
+    vertical-align:middle;
+    padding-right: 10px;
 
 }
 
-.page--is-mercado-theme-enabled .third-party-join__google-btn {
-    border-color: #0a66c2;
-    background-color: transparent;
-    height: 48px;
-    border-radius: 24px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
 .third-party-join__google-btn {
-    border-color: #0073b1;
+    border-color: #009ff5;
     border-width: 1px;
-    border-style: solid;
-    background-color: #edf0f3;
+    border-style:solid;
+    background-color: #ffffff;
 }
-.third-party-join__google-btn {
-    border-color: #0073b1;
-    border-width: 1px;
-    border-style: solid;
-    background-color: #edf0f3;
+
+.third-party-join__google-btn:hover {
+    background-color: #b0e2ffa6;
+    box-shadow: 0 0 5px #0073b1;
 }
 button {
     appearance: auto;
@@ -82,9 +63,9 @@ button {
     text-transform: none;
     text-indent: 0px;
     text-shadow: none;
-    display: inline-block;
+    vertical-align: middle;
     text-align: center;
-    align-items: flex-start;
+    
     cursor: default;
     background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
     box-sizing: border-box;
