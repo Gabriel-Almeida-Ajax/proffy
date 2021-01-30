@@ -102,7 +102,7 @@ return (
                   <button type="button" data-tracking-control-name="_join-form-join-with-google" className="third-party-join__btn third-party-join__google-btn">
           <Link to="/singin" className="third-party-join__google-btn-content"> 
             <img src={googleIcon} alt="Estudar" />
-              Cadastre-se com Google</Link></button></div>
+              Entre com Google</Link></button></div>
           </fieldset>
           <footer>
             <p>
