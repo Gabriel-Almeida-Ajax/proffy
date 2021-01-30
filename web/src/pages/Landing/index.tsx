@@ -37,7 +37,7 @@ function Landing(): ReactElement {
         <img src={landingImg} alt="Plataforma de estudos" className="hero-image" />
 
         <div className="buttons-container">
-          <Link to="/study" className="study">
+          <Link to="/singin" className="study">
             <img src={studyIcon} alt="Estudar" />
             Consumir
           </Link>

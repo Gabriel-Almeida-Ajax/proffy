@@ -8,13 +8,19 @@ import Textarea from '../../../components/Textarea';
 import Select from '../../../components/Select';
 
 import warningIcon from '../../../assets/images/icons/warning.svg';
-import './../styles.css';
+import './styles.css';
+import googleIcon from "../../../assets/images/pesquisa.svg";
 
 function Singin(): ReactElement {
 
     const history = useHistory();
 
   const [name, setName] = useState('');
+  const [avatar, setAvatar] = useState('');
+  const [bio, setBio] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+
+  const [subject, setSubject] = useState('');
   const [cost, setCost] = useState('');
   const [email, setEmail] = useState('');
 
@@ -34,6 +40,9 @@ function Singin(): ReactElement {
     api.post('classes', {
       name,
       email,
+      whatsapp: "undefined",
+      bio: "undefined",
+      subject: "undefined",
       cost: Number(cost),
       schedule: scheduleItems,
     }).then(() => {
@@ -67,32 +76,51 @@ return (
           <fieldset>
             <legend>Seus dados</legend>
             <Input
-              name="name"
-              label="Nome Completo"
+              name="user"
+              label="Email"
               value={name}
               onChange={(e) => { setName(e.target.value) }}
             />
 
             <Input
-              name="email"
-              label="Digite seu email"
+              name="pass"
+              type="password"
+              label="Password"
               value={email}
               onChange={(e) => { setEmail(e.target.value) }}
             />
 
            
           </fieldset>
-
+          <fieldset>
+          <div className="third-party-join__container">
+              <p className="third-party-join__reg-option">
+                  <span className="third-party-join__line-wrapper">
+                      <span className="third-party-join__line">
+                          </span>
+                          </span>
+                          <span className="third-party-join__content">
+                              <span className="third-party-join__or-span">
+                                  ou
+                                  </span>
+                                  </span>
+                                  </p>
+                                  <button type="button" data-tracking-control-name="_join-form-join-with-google" className="third-party-join__btn third-party-join__google-btn">
+                                  <img src={googleIcon} alt="Google" />
+                                      
+                                      <span className="third-party-join__google-btn-content">Cadastre-se com Google</span></button></div>
+          </fieldset>
           <footer>
             <p>
               <img src={warningIcon} alt="Aviso importante" />
-              Importante! 
+              
               {' '}
-              <br />
-              Preencha todos os dados
+              
+              <a href="https://">Esqueceu algo?</a>
+              
             </p>
             <button type="submit">
-              Registrar-se
+              Sing in
             </button>
           </footer>
         </form>
