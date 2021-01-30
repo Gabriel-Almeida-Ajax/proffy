@@ -14,6 +14,7 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
+    "firestart": "firebase emulators:start",
     "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
     "knex:rollback": "knex --knexfile knexfile.ts migrate:rollback",
