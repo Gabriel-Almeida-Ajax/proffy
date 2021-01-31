@@ -6,32 +6,15 @@ import api from '../../services/api';
 import Input from '../../components/Input';
 
 
-import warningIcon from '../../../assets/images/icons/warning.svg';
+import warningIcon from '../../assets/images/icons/warning.svg';
 import './styles.css';
-import googleIcon from "../../../assets/images/pesquisa.svg";
+import googleIcon from "../../assets/images/pesquisa.svg";
 
 function Singin(): ReactElement {
-
-    const history = useHistory();
-
+  const history = useHistory();
   const [name, setName] = useState('');
-  const [avatar, setAvatar] = useState('');
-  const [bio, setBio] = useState('');
-  const [whatsapp, setWhatsapp] = useState('');
-
-  const [subject, setSubject] = useState('');
-  const [cost, setCost] = useState('');
   const [email, setEmail] = useState('');
 
-  const [scheduleItems, setScheduleItems] = useState([
-    { week_day: 0, from: '', to: '' },
-  ]);
-
-  function addNewScheduleItem() {
-    setScheduleItems([...scheduleItems,
-    { week_day: 0, from: '', to: '' },
-    ]);
-  }
 
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
@@ -42,8 +25,6 @@ function Singin(): ReactElement {
       whatsapp: "undefined",
       bio: "undefined",
       subject: "undefined",
-      cost: Number(cost),
-      schedule: scheduleItems,
     }).then(() => {
       alert('Cadastro realizado com sucesso!');
 
@@ -51,18 +32,6 @@ function Singin(): ReactElement {
     }).catch(() => {
       alert('Erro no cadastro.');
     });
-  }
-
-  function setScheduleItemValue(position: number, field: string, value: string) {
-    const updateScheduleItems = scheduleItems.map((scheduleItem, index) => {
-      if (index === position) {
-        return { ...scheduleItem, [field]: value };
-      }
-
-      return scheduleItem;
-    });
-
-    setScheduleItems(updateScheduleItems);
   }
 return (
     <div id="page-teacher-form" className="container">

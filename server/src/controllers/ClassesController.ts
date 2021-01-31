@@ -60,26 +60,25 @@ export default class ClassesController {
 		const subject = filters.subject as string;
 		const week_day = filters.week_day as string;
 		const time = filters.time as string;
-		const all = filters.all as string;
+		const err = filters.all as string;
 
 
-		if(all){
+		if(err){
+			return response.status(400).json({
+				error: 'Missing filters to search classes.',
+			});
+		}
+		
+		
+		if (!filters.week_day || !filters.subject || !filters.time) {
 			const classes = await db('classes')
 			.whereExists(function () {
 				this.select('class_schedule.*')
 					.from('class_schedule')
 			})
-			
 			.join('users', 'classes.user_id', '=', 'users.id')
-
+	
 			return response.send(classes);
-		}
-
-
-		if (!filters.week_day || !filters.subject || !filters.time) {
-			return response.status(400).json({
-				error: 'Missing filters to search classes.',
-			});
 		}
 
 		const timeInMinutes = convertHourToMinutes(time);
