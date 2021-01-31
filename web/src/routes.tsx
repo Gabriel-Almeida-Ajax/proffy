@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Singin from './pages/Landing/auth/singin';
+import Singin from './pages/auth/singin';
 
 import Landing from './pages/Landing';
 import TeacherList from './pages/TeacherList';
