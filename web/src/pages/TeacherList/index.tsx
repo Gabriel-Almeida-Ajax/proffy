@@ -14,6 +14,8 @@ function TeacherList(): ReactElement {
 
   const [teachers, setTeachers] = useState([]);
 
+  
+
   async function searchTeachers(e: FormEvent) {
     e.preventDefault();
 
