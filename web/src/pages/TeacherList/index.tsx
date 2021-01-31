@@ -7,14 +7,14 @@ import './styles.css';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 
-function TeacherList(): ReactElement {
+function ContributorList(): ReactElement {
   const [subject, setSubject] = useState('');
   const [weekDay, setWeekDay] = useState('');
   const [time, setTime] = useState('');
 
   const [teachers, setTeachers] = useState([]);
 
-  async function searchTeachers(e: FormEvent) {
+  async function searchContributor(e: FormEvent) {
     e.preventDefault();
 
     const response = await api.get('classes', {
@@ -31,7 +31,7 @@ function TeacherList(): ReactElement {
   return (
     <div id="page-teacher-list" className="container">
       <PageHeader title="Colaboradores disponíveis.">
-        <form id="search-teachers" onSubmit={searchTeachers}>
+        <form id="search-teachers" onSubmit={searchContributor}>
           <Select
             name="subject"
             label="Serviços"
@@ -81,4 +81,4 @@ function TeacherList(): ReactElement {
   );
 }
 
-export default TeacherList;
+export default ContributorList;
